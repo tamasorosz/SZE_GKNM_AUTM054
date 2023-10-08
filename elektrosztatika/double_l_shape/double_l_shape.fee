@@ -1,0 +1,53 @@
+[Format]      =  1
+[Precision]   =  1e-008
+[MinAngle]    =  30
+[DoSmartMesh] =  1
+[Depth]       =  1
+[LengthUnits] =  inches
+[ProblemType] =  planar
+[Coordinates] =  cartesian
+[Comment]     =  "Add comments here."
+[PointProps]   = 0
+[BdryProps]   = 2
+  <BeginBdry>
+    <BdryName> = "GND"
+    <BdryType> = 0
+    <Vs> = 0
+    <qs> = 0
+    <c0> = 0
+    <c1> = 0
+  <EndBdry>
+  <BeginBdry>
+    <BdryName> = "U0"
+    <BdryType> = 0
+    <Vs> = 2500
+    <qs> = 0
+    <c0> = 0
+    <c1> = 0
+  <EndBdry>
+[BlockProps]  = 1
+  <BeginBlock>
+    <BlockName> = "air"
+    <ex> = 1
+    <ey> = 1
+    <qv> = 0
+  <EndBlock>
+[ConductorProps]  = 0
+[NumPoints] = 6
+0	0	0	0	0
+0.056000000000000001	0	0	0	0
+0.056000000000000001	0.16400000000000001	0	0	0
+0.056000000000000001	0.24399999999999999	0	0	0
+0	0.24399999999999999	0	0	0
+0	0.080000000000000002	0	0	0
+[NumSegments] = 6
+0	1	-1	1	0	0	0
+1	2	-1	1	0	0	0
+2	3	-1	0	0	0	0
+3	4	-1	2	0	0	0
+4	5	-1	2	0	0	0
+5	0	-1	0	0	0	0
+[NumArcSegments] = 0
+[NumHoles] = 0
+[NumBlockLabels] = 1
+0.028000000000000001	0.122	1	-1	0	0
