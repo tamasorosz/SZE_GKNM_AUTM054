@@ -45,8 +45,8 @@ def solenoid(n, w, h, radius, gap):
     # set boundary
     z = (h + gap) * n
     a = Node(0, -z)
-    b = Node(2 * radius, -z)
-    c = Node(2 * radius, z)
+    b = Node(10 * radius, -z)
+    c = Node(10 * radius, z)
     d = Node(0, z)
 
     l1 = Line(a, b)
@@ -68,7 +68,7 @@ def solenoid(n, w, h, radius, gap):
     problem.set_boundary_definition(l4.selection_point(), a0)
 
     # Materials
-    copper = MagneticMaterial(material_name="copper", J=1)
+    copper = MagneticMaterial(material_name="copper", J=1/(w*h))
     air = MagneticMaterial(material_name="air")
 
     problem.add_material(copper)
@@ -87,4 +87,4 @@ def solenoid(n, w, h, radius, gap):
 
 
 if __name__ == '__main__':
-    solenoid(30, 4, 4, 9.3, 4)
+    solenoid(10, 2, 2, 4,1)
